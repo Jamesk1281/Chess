@@ -3,24 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24EA0BBD2CA236C3004ACB9F /* ChessMLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EA0BBC2CA236C3004ACB9F /* ChessMLApp.swift */; };
-		24EA0BBF2CA236C3004ACB9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EA0BBE2CA236C3004ACB9F /* ContentView.swift */; };
+		24EA0BBD2CA236C3004ACB9F /* ChessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EA0BBC2CA236C3004ACB9F /* ChessApp.swift */; };
+		24EA0BBF2CA236C3004ACB9F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EA0BBE2CA236C3004ACB9F /* GameView.swift */; };
 		24EA0BC12CA236C5004ACB9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24EA0BC02CA236C5004ACB9F /* Assets.xcassets */; };
 		24EA0BC52CA236C5004ACB9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24EA0BC42CA236C5004ACB9F /* Preview Assets.xcassets */; };
+		24FAD7662CA4E46600371490 /* ChessGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FAD7652CA4E46600371490 /* ChessGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24EA0BB92CA236C3004ACB9F /* ChessML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessML.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		24EA0BBC2CA236C3004ACB9F /* ChessMLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessMLApp.swift; sourceTree = "<group>"; };
-		24EA0BBE2CA236C3004ACB9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		24EA0BB92CA236C3004ACB9F /* Chess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chess.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24EA0BBC2CA236C3004ACB9F /* ChessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessApp.swift; sourceTree = "<group>"; };
+		24EA0BBE2CA236C3004ACB9F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		24EA0BC02CA236C5004ACB9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		24EA0BC22CA236C5004ACB9F /* ChessML.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChessML.entitlements; sourceTree = "<group>"; };
+		24EA0BC22CA236C5004ACB9F /* Chess.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chess.entitlements; sourceTree = "<group>"; };
 		24EA0BC42CA236C5004ACB9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		24FAD7652CA4E46600371490 /* ChessGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		24153E4F2E4547D900517B5C /* Pieces */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Pieces; sourceTree = "<group>"; };
+		2451BF322E454BB1002AC1A4 /* Board */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Board; sourceTree = "<group>"; };
+		2451BF332E454BC3002AC1A4 /* Extras */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extras; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		24EA0BB62CA236C3004ACB9F /* Frameworks */ = {
@@ -36,7 +44,7 @@
 		24EA0BB02CA236C3004ACB9F = {
 			isa = PBXGroup;
 			children = (
-				24EA0BBB2CA236C3004ACB9F /* ChessML */,
+				24EA0BBB2CA236C3004ACB9F /* Chess */,
 				24EA0BBA2CA236C3004ACB9F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,21 +52,25 @@
 		24EA0BBA2CA236C3004ACB9F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24EA0BB92CA236C3004ACB9F /* ChessML.app */,
+				24EA0BB92CA236C3004ACB9F /* Chess.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		24EA0BBB2CA236C3004ACB9F /* ChessML */ = {
+		24EA0BBB2CA236C3004ACB9F /* Chess */ = {
 			isa = PBXGroup;
 			children = (
-				24EA0BBC2CA236C3004ACB9F /* ChessMLApp.swift */,
-				24EA0BBE2CA236C3004ACB9F /* ContentView.swift */,
+				24EA0BBC2CA236C3004ACB9F /* ChessApp.swift */,
+				24EA0BBE2CA236C3004ACB9F /* GameView.swift */,
+				24FAD7652CA4E46600371490 /* ChessGame.swift */,
+				2451BF322E454BB1002AC1A4 /* Board */,
+				24153E4F2E4547D900517B5C /* Pieces */,
+				2451BF332E454BC3002AC1A4 /* Extras */,
 				24EA0BC02CA236C5004ACB9F /* Assets.xcassets */,
-				24EA0BC22CA236C5004ACB9F /* ChessML.entitlements */,
+				24EA0BC22CA236C5004ACB9F /* Chess.entitlements */,
 				24EA0BC32CA236C5004ACB9F /* Preview Content */,
 			);
-			path = ChessML;
+			path = Chess;
 			sourceTree = "<group>";
 		};
 		24EA0BC32CA236C5004ACB9F /* Preview Content */ = {
@@ -72,9 +84,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		24EA0BB82CA236C3004ACB9F /* ChessML */ = {
+		24EA0BB82CA236C3004ACB9F /* Chess */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24EA0BC82CA236C5004ACB9F /* Build configuration list for PBXNativeTarget "ChessML" */;
+			buildConfigurationList = 24EA0BC82CA236C5004ACB9F /* Build configuration list for PBXNativeTarget "Chess" */;
 			buildPhases = (
 				24EA0BB52CA236C3004ACB9F /* Sources */,
 				24EA0BB62CA236C3004ACB9F /* Frameworks */,
@@ -84,9 +96,14 @@
 			);
 			dependencies = (
 			);
-			name = ChessML;
+			fileSystemSynchronizedGroups = (
+				24153E4F2E4547D900517B5C /* Pieces */,
+				2451BF322E454BB1002AC1A4 /* Board */,
+				2451BF332E454BC3002AC1A4 /* Extras */,
+			);
+			name = Chess;
 			productName = ChessML;
-			productReference = 24EA0BB92CA236C3004ACB9F /* ChessML.app */;
+			productReference = 24EA0BB92CA236C3004ACB9F /* Chess.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 24EA0BB42CA236C3004ACB9F /* Build configuration list for PBXProject "ChessML" */;
+			buildConfigurationList = 24EA0BB42CA236C3004ACB9F /* Build configuration list for PBXProject "Chess" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,11 +130,13 @@
 				Base,
 			);
 			mainGroup = 24EA0BB02CA236C3004ACB9F;
+			packageReferences = (
+			);
 			productRefGroup = 24EA0BBA2CA236C3004ACB9F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				24EA0BB82CA236C3004ACB9F /* ChessML */,
+				24EA0BB82CA236C3004ACB9F /* Chess */,
 			);
 		};
 /* End PBXProject section */
@@ -139,8 +158,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24EA0BBF2CA236C3004ACB9F /* ContentView.swift in Sources */,
-				24EA0BBD2CA236C3004ACB9F /* ChessMLApp.swift in Sources */,
+				24FAD7662CA4E46600371490 /* ChessGame.swift in Sources */,
+				24EA0BBF2CA236C3004ACB9F /* GameView.swift in Sources */,
+				24EA0BBD2CA236C3004ACB9F /* ChessApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,10 +286,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ChessML/ChessML.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Chess/Chess.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ChessML/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Chess/Preview Content\"";
 				DEVELOPMENT_TEAM = 28ZU5P5GC3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -289,13 +310,13 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = james.ChessML;
+				PRODUCT_BUNDLE_IDENTIFIER = james.Chess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -304,10 +325,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ChessML/ChessML.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Chess/Chess.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ChessML/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Chess/Preview Content\"";
 				DEVELOPMENT_TEAM = 28ZU5P5GC3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -327,20 +349,20 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = james.ChessML;
+				PRODUCT_BUNDLE_IDENTIFIER = james.Chess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		24EA0BB42CA236C3004ACB9F /* Build configuration list for PBXProject "ChessML" */ = {
+		24EA0BB42CA236C3004ACB9F /* Build configuration list for PBXProject "Chess" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24EA0BC62CA236C5004ACB9F /* Debug */,
@@ -349,7 +371,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24EA0BC82CA236C5004ACB9F /* Build configuration list for PBXNativeTarget "ChessML" */ = {
+		24EA0BC82CA236C5004ACB9F /* Build configuration list for PBXNativeTarget "Chess" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24EA0BC92CA236C5004ACB9F /* Debug */,

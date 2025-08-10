@@ -141,6 +141,5 @@ func convertToFEN(_ board: [[(any ChessPiece)?]], game: ChessGame) -> String {
     
     FEN += "\(String(game.halfMoveClock)) " // Handles the halfmove clock section.
     FEN += "\(String(game.fullMoveNumber))" // Handles the fullmove number section.
-    print(FEN)
     return FEN
 }

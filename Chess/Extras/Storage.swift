@@ -1,11 +1,5 @@
-//
-//  UsefulThings.swift
-//  ChessML
-//
-//  Created by James . on 9/30/24.
-//
-
 import Foundation
+import SwiftUI
 
 /* Sample board
 
@@ -31,17 +25,19 @@ func convertToAlgebraicNotation(square: (Int, Int)) -> String {
     }
 }
 
-//struct Square { // MARK: Maybe make the boardmatrix out of squares with pieces inside of them
-//    var pieceOccupying: (any ChessPiece)?
-//    var rank: Int
-//    var file: Int
-//
-//    var algebraicNotation: String {
-//        let ranks: [Int:String] = [0:"a", 1:"b", 2:"c", 3:"d", 4:"e", 5:"f", 6:"g", 7:"h"]
-//        if let rank = ranks[file] {
-//            return "\(rank)\(file + 1)" // Return the matching rank for the rank Int and the file with one added to it to account for it being an array index.
-//        } else {
-//            return ""
-//        }
-//    }
-//}
+extension Int {
+    func isOdd() -> Bool {
+        if self % 2 == 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    static postfix func ++(x: inout Int) {
+        x += 1
+    }
+    static postfix func --(x: inout Int) {
+        x -= 1
+    }
+}

@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
-struct ChessMLApp: App {
+struct ChessApp: App {
+    @StateObject var game = ChessGame()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GameView(game: game)
         }
     }
 }
